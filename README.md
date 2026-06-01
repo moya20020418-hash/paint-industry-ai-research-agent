@@ -75,11 +75,18 @@ This project is specifically designed for **non-engineer business users at SMEs*
 ## Requirements
 
 - Python 3.10 or higher
-- No external libraries required (standard library only)
+- **Core report generation** uses only the Python standard library — no additional installation needed
+- **Web collection** (`--collect-web`) requires optional dependencies:
+
+```bash
+pip install requests beautifulsoup4 lxml
+```
+
+You only need to run this once. If you skip this step, all features except `--collect-web` will work without any installation.
 
 ### Check your Python version
 
-```
+```bash
 python --version
 ```
 
@@ -123,6 +130,11 @@ Open `inputs/sample_input.md` in a text editor and add your research notes, ques
 See `examples/sample_input.md` for guidance on what to include.
 
 ### Step 4: Collect web sources (optional)
+
+> **First-time setup for web collection:** Install the required libraries once before running this step.
+> ```bash
+> pip install requests beautifulsoup4 lxml
+> ```
 
 ```bash
 python src/main.py --collect-web
