@@ -175,3 +175,20 @@ APIキーや認証情報の扱いに関するルール：
 - プロジェクトの目的・ターゲット・表現ルール・価値仮説に関する変更はここに追記する
 
 最終更新：2026-06-01
+
+## Codex for OSS Application Status
+
+- Application submitted: 2026-06-01
+- Program: OpenAI Codex for OSS
+- Requested support:
+  - Codex Security
+  - API credits
+- Role: Primary maintainer
+- Repository: https://github.com/moya20020418-hash/paint-industry-ai-research-agent
+
+Current priority after submission:
+- Maintain repository quality
+- Improve documentation clarity
+- Keep safety guidance clear for non-engineer users
+- Avoid large, unstable feature expansion before review
+- Use Claude Code and Codex mainly for review, documentation consistency, issue planning, and small quality improvements
