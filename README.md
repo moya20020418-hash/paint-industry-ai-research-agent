@@ -174,6 +174,25 @@ reports/research_report_YYYYMMDD_HHMMSS.md
 
 Open the report in any text editor. **Fill in Sections 4-6 with your verified research findings before sharing it.**
 
+### Example Report Output
+
+A sample generated report is available at:
+
+`reports/research_report_webcollect_anticorrosion_20260530.md`
+
+The report demonstrates how the tool separates:
+
+- confirmed facts
+- hypotheses
+- business implications
+- numeric evidence checks
+- uncertainty and risks
+- QA checklist results
+
+For safety, the tool does not make unsupported claims about market size, growth rate, product performance, or competitor superiority unless reliable source text is available.
+
+The sample report is based on collected public web text and should be treated as an assisted research draft, not as a fully verified market report.
+
 ---
 
 ## Example Commands
