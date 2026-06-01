@@ -29,7 +29,7 @@ This is an early-stage open-source project. The roadmap below reflects the plann
 
 ## Phase 3: Paint Industry AI Opportunity Reports
 
-- [ ] AI adoption opportunity identification section in reports
+- [ ] AI adoption opportunity identification section in reports (Sections 11-16 are currently generated as manual-fill stubs — upgrade to AI-assisted content)
 - [ ] Paint and coatings industry-specific research templates
 - [ ] Anticorrosion and infrastructure maintenance topic templates
 - [ ] Competitor AI adoption analysis section
