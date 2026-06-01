@@ -13,7 +13,7 @@ The tool helps non-engineer business users collect public web sources, structure
 
 It is designed as a human-in-the-loop workflow — it does not replace expert judgment, but helps non-engineer users organize public information and identify where AI may create practical business value.
 
-- **Repository:** (your GitHub repository URL)
+- **Repository:** https://github.com/moya20020418-hash/paint-industry-ai-research-agent
 - **License:** MIT
 - **Language:** Python 3.10+, Markdown
 - **Status:** Early-stage open-source project

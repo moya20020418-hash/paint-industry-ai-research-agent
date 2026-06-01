@@ -92,7 +92,7 @@ If it shows `Python 3.10.x` or higher, you are ready to start.
 ### Step 1: Clone or download the repository
 
 ```bash
-git clone https://github.com/yourusername/paint-industry-ai-research-agent.git
+git clone https://github.com/moya20020418-hash/paint-industry-ai-research-agent.git
 cd paint-industry-ai-research-agent
 ```
 
