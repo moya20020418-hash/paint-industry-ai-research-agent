@@ -1,0 +1,179 @@
+"""
+templates.py
+レポート出力用Markdownテンプレートを管理するモジュール
+"""
+from datetime import datetime
+
+
+def get_report_template(
+    topic: dict,
+    input_text: str,
+    generated_at: datetime,
+) -> str:
+    """
+    レポート全体のMarkdownテンプレートを返す。
+
+    topic     : config/topics.json の1件分のdict
+    input_text: inputs/*.md の生テキスト
+    generated_at: レポート生成日時
+    """
+    topic_name = topic.get("name", "（未設定）")
+    topic_desc = topic.get("description", "")
+    keywords = "、".join(topic.get("keywords", []))
+    companies = "、".join(topic.get("target_companies", []))
+    date_str = generated_at.strftime("%Y-%m-%d")
+    datetime_str = generated_at.strftime("%Y-%m-%d %H:%M:%S")
+
+    return f"""# Daily Market Research Report
+
+> **生成日時:** {datetime_str}
+> **ツール:** auto-research-agent MVP v0.1
+> **注意:** このレポートは入力メモをもとに生成されたテンプレートです。
+> AIによる補完・推測箇所には【推測】と明記します。未確認情報は【要確認】と明記します。
+> 入力にない事実の断定はしていません。
+
+---
+
+## 1. 調査テーマ
+
+**テーマ名:** {topic_name}
+
+**概要:** {topic_desc}
+
+**関連キーワード:** {keywords}
+
+**調査対象企業・組織:** {companies}
+
+**調査基準日:** {date_str}
+
+---
+
+## 2. 今日の重要トピック
+
+> ここには今日特に注目すべきトピックを記載します。
+> 現時点では入力メモから自動抽出した要素を列挙します。
+
+{_extract_highlights(input_text)}
+
+---
+
+## 3. 入力情報の要約
+
+以下は `inputs/` フォルダに保存された調査メモの内容です。
+
+<details>
+<summary>入力メモ全文（クリックで展開）</summary>
+
+{input_text}
+
+</details>
+
+---
+
+## 4. 事実として確認できること
+
+> **記入ルール:** 一次資料（公式サイト・公式PDF・政府統計）で確認できた内容のみ記載。
+> 根拠URLまたは資料名を必ず添える。
+
+| # | 事実 | 根拠資料 | 確認済み |
+|---|------|----------|----------|
+| 1 | （ここに公式確認済みの事実を記入） | （URL or 資料名） | [ ] |
+| 2 | （ここに公式確認済みの事実を記入） | （URL or 資料名） | [ ] |
+
+---
+
+## 5. 推測・仮説
+
+> **記入ルール:** 事実から論理的に導かれる推測のみ。断定表現禁止。
+> 必ず「〜と考えられる」「〜の可能性がある」などの表現を使う。
+
+- 【推測】（ここに推測を記入。根拠となる事実を括弧内に示す）
+- 【推測】（例：インフラ老朽化の進行により、防錆補修需要は拡大傾向にある可能性がある）
+
+---
+
+## 6. 市場・企業への示唆
+
+> **記入ルール:** 事実・推測をもとにした考察。「かもしれない」「検討余地がある」等の表現を使う。
+
+- 【示唆】（ここに示唆を記入）
+- 【示唆】（例：亜鉛含有率の高い製品は、公共工事入札において技術的優位性を示す材料になりうる）
+
+---
+
+## 7. 数値・根拠の確認
+
+> **記入ルール:** 数値はすべて根拠を明記。根拠不明の数値は「【根拠不明】」と付記して使用禁止。
+
+| 数値 | 内容 | 根拠 | ステータス |
+|------|------|------|------------|
+| （例：96%以上） | ローバル 亜鉛含有率 | 公式サイト | 根拠あり |
+| （要入力） | 市場規模 | 未確認 | **【根拠不明】** |
+
+---
+
+## 8. リスク・不確実性
+
+- **情報の鮮度リスク:** 収集した情報は {date_str} 時点のもの。最新情報は一次資料で再確認が必要。
+- **情報の網羅性リスク:** 入力メモに含まれない情報は本レポートに反映されていない。
+- **競合情報の信頼性:** 競合他社情報は公式資料ベースのみ使用すること。SNS・掲示板情報は使用禁止。
+
+（追加リスクがあればここに記入）
+
+---
+
+## 9. 次に調べるべきこと
+
+{_extract_todos(input_text)}
+
+---
+
+## 10. QAチェック
+
+レポートを提出・共有する前に、以下をすべて確認してください。
+
+| チェック項目 | 確認 |
+|-------------|------|
+| 事実・推測・示唆が明確に区別されているか | [ ] |
+| すべての数値に根拠が明記されているか | [ ] |
+| 根拠不明の情報を断定していないか | [ ] |
+| 「絶対」「保証」「必ず」等の断定表現がないか | [ ] |
+| 一次資料（公式サイト・PDF・政府統計）を優先しているか | [ ] |
+| SNS・掲示板・まとめサイトの情報を無根拠で使っていないか | [ ] |
+| 競合他社情報は公式資料ベースで記載されているか | [ ] |
+| ハルシネーション（入力にない事実の捏造）がないか | [ ] |
+| 未確認項目に【要確認】が付いているか | [ ] |
+| レポートの生成日・調査基準日が明記されているか | [ ] |
+
+---
+
+*このレポートは auto-research-agent によって自動生成されたテンプレートです。*
+*内容の正確性はユーザーが一次資料と照合して確認してください。*
+"""
+
+
+def _extract_highlights(input_text: str) -> str:
+    """入力テキストから '###' 見出し行を抽出してリスト化する"""
+    lines = input_text.splitlines()
+    highlights = []
+    for line in lines:
+        stripped = line.strip()
+        if stripped.startswith("### "):
+            title = stripped.lstrip("# ").strip()
+            highlights.append(f"- {title}")
+    if not highlights:
+        return "- （入力メモから重要トピックを手動で記入してください）"
+    return "\n".join(highlights)
+
+
+def _extract_todos(input_text: str) -> str:
+    """入力テキストから '- [ ]' のTODO行を抽出する"""
+    lines = input_text.splitlines()
+    todos = []
+    for line in lines:
+        stripped = line.strip()
+        if stripped.startswith("- [ ]"):
+            todos.append(stripped)
+    if not todos:
+        return "- （次のアクションを手動で記入してください）"
+    return "\n".join(todos)

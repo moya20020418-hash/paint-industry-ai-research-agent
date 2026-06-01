@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyc
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env
+ENV/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.suo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Project-specific: generated outputs (do NOT commit these)
+reports/
+inputs/web_collected_*.md
+logs/
+*.log
+
+# API keys and secrets (never commit these)
+.env.local
+.env.production
+secrets.json
+credentials.json
+api_keys.txt
+
+# Note: examples/ IS committed — it contains sample data for users
+# Note: inputs/sample_input.md IS committed — it is a usage template

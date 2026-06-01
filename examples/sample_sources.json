@@ -1,0 +1,52 @@
+{
+  "_note": "This is a sample configuration file for demonstration purposes. Replace these example sources with sources relevant to your own research topic. All URLs in this sample are publicly accessible.",
+  "sources": [
+    {
+      "id": "example_industry_association",
+      "name": "Example: Industry Association (replace with your industry association)",
+      "url": "https://example.com/industry-association",
+      "source_type": "industry_association",
+      "priority": "high",
+      "_note": "Replace this URL with a real industry association website"
+    },
+    {
+      "id": "example_government_statistics",
+      "name": "Example: Japan Government Statistics Portal (e-Stat)",
+      "url": "https://www.e-stat.go.jp/",
+      "source_type": "government",
+      "priority": "high",
+      "_note": "e-Stat is Japan's official government statistics portal (public)"
+    },
+    {
+      "id": "example_ministry",
+      "name": "Example: Ministry of Land, Infrastructure, Transport and Tourism (Japan)",
+      "url": "https://www.mlit.go.jp/",
+      "source_type": "government",
+      "priority": "high",
+      "_note": "MLIT publishes infrastructure and construction statistics (public)"
+    },
+    {
+      "id": "example_company_official",
+      "name": "Example: Target Company Official Site (replace with your target company)",
+      "url": "https://example.com/company",
+      "source_type": "official_company",
+      "priority": "high",
+      "_note": "Replace this URL with the official website of the company you are researching"
+    },
+    {
+      "id": "example_company_blog",
+      "name": "Example: Target Company Official Blog or News",
+      "url": "https://example.com/company/news",
+      "source_type": "official_blog",
+      "priority": "medium",
+      "_note": "Official company blogs and news pages are secondary sources — audit before use"
+    }
+  ],
+  "collection_settings": {
+    "request_timeout_sec": 10,
+    "max_text_chars": 5000,
+    "user_agent": "paint-industry-ai-research-agent/0.1 (open-source research tool; not for commercial scraping)",
+    "respect_robots_txt": true,
+    "min_interval_sec": 2
+  }
+}

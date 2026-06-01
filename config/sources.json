@@ -1,0 +1,33 @@
+{
+  "_readme": "This file configures the URLs collected by --collect-web. Edit this file to add your own research sources. All URLs must be publicly accessible. Do not add URLs that require authentication or contain private data. See examples/sample_sources.json for a configuration template.",
+  "sources": [
+    {
+      "id": "roval_official",
+      "name": "Roval Corporation Official Site (example: anticorrosion paint manufacturer)",
+      "url": "https://www.roval.co.jp/",
+      "source_type": "official_company",
+      "priority": "high"
+    },
+    {
+      "id": "roval_note",
+      "name": "Roval Corporation Official Note Blog (example: manufacturer blog)",
+      "url": "https://note.com/roval",
+      "source_type": "official_blog",
+      "priority": "medium"
+    },
+    {
+      "id": "mlit",
+      "name": "Ministry of Land, Infrastructure, Transport and Tourism (Japan)",
+      "url": "https://www.mlit.go.jp/",
+      "source_type": "government",
+      "priority": "high"
+    }
+  ],
+  "collection_settings": {
+    "request_timeout_sec": 10,
+    "max_text_chars": 5000,
+    "user_agent": "paint-industry-ai-research-agent/0.1 (open-source research tool; not for commercial scraping)",
+    "respect_robots_txt": true,
+    "min_interval_sec": 2
+  }
+}

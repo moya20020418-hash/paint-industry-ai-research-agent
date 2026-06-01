@@ -1,0 +1,29 @@
+{
+  "_readme": "This file defines research topics. Edit or add topics to match your industry and research goals. See examples/sample_input.md for guidance on how to use topics with research notes.",
+  "topics": [
+    {
+      "id": "anticorrosion_market",
+      "name": "Anticorrosion and Infrastructure Maintenance Market",
+      "description": "Market research for anticorrosion coatings, zinc-based surface treatment, and infrastructure repair — focused on AI adoption opportunities for SMEs",
+      "keywords": ["anticorrosion", "zinc coating", "infrastructure maintenance", "surface treatment", "paint", "construction", "bridge", "防錆", "亜鉛めっき", "インフラ補修"],
+      "target_companies": ["paint manufacturers", "anticorrosion specialists", "infrastructure contractors"],
+      "ai_adoption_focus": "Identify AI adoption opportunities in product compatibility, technical support, sales, and market research workflows",
+      "priority": "high"
+    },
+    {
+      "id": "ai_agent_market",
+      "name": "AI Agent Technology and SME Manufacturing Adoption",
+      "description": "Research on AI agent technology trends and practical AI adoption in manufacturing SMEs and traditional B2B industries",
+      "keywords": ["AI agent", "SME AI adoption", "manufacturing AI", "DX", "automation", "LLM", "non-engineer AI", "中小企業AI", "製造業DX"],
+      "target_companies": ["AI technology providers", "manufacturing SMEs", "traditional industry companies"],
+      "ai_adoption_focus": "Identify practical AI adoption patterns relevant to non-engineer staff at manufacturing SMEs",
+      "priority": "medium"
+    }
+  ],
+  "default_topic_id": "anticorrosion_market",
+  "output": {
+    "format": "markdown",
+    "reports_dir": "reports",
+    "filename_prefix": "research_report"
+  }
+}
