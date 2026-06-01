@@ -178,7 +178,37 @@ Open the report in any text editor. **Fill in Sections 4-6 with your verified re
 
 ## Example Commands
 
+### Windows
+
+```powershell
+# Generate a report from the sample input
+py src/main.py --input sample_input.md
+
+# Collect web sources from configured URLs
+py src/main.py --collect-web
+
+# Generate a report from collected web text
+py src/main.py --input web_collected_YYYYMMDD.md
+
+# Generate a report from your own research notes
+py src/main.py --input my_research_notes.md
+
+# List available research topics
+py src/main.py --list-topics
+
+# List input files in inputs/
+py src/main.py --list-inputs
+
+# Generate a report for a specific topic
+py src/main.py --topic ai_agent_market
+```
+
+### macOS/Linux
+
 ```bash
+# Generate a report from the sample input
+python src/main.py --input sample_input.md
+
 # Collect web sources from configured URLs
 python src/main.py --collect-web
 
