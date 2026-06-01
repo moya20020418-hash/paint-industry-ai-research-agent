@@ -33,11 +33,13 @@ At the same time, these companies face real business problems that AI could help
 
 This project focuses on making AI-assisted research workflows accessible to SMEs and non-engineer business users in traditional industries. Many small and medium-sized companies do not have dedicated engineering or data science teams, but still need to understand market changes, competitor activity, and practical AI adoption opportunities. This project provides a structured, human-in-the-loop research workflow that helps users collect public sources, audit claims, and generate practical reports.
 
-The paint and coatings industry is the initial focus, but the framework generalizes to other traditional B2B industries where AI adoption is slower than in software-first sectors.
+The paint and coatings industry is the initial focus, but the framework generalizes to other traditional B2B industries where AI adoption may be slower than in software-first sectors, particularly for SMEs without dedicated engineering resources.
 
 ---
 
 ## 3. My Role as Maintainer
+
+I am a non-engineer working in a small business in the paint and coatings industry in Japan. This project grew out of my own experience: I needed a structured way to collect public market information, audit sources, and identify AI adoption opportunities — but as a non-engineer, most available tools were too technical, too expensive, or assumed an engineering background I do not have. I built this tool because I needed it myself, and because I believe others in similar roles can benefit from it.
 
 I am the primary maintainer and creator of this project. I am responsible for:
 
@@ -67,6 +69,7 @@ If accepted for the Codex for Open Source program, I would use the credits for:
 - **Testing AI-assisted source auditing** — Experimenting with AI-assisted source reliability classification
 - **Testing AI-assisted insight generation** — Prototyping AI-assisted extraction of AI adoption opportunities from collected web text
 - **Hallucination prevention research** — Using AI to help design fact/assumption/insight separation rules
+- **Safe API integration design** — When future API features are implemented, designing credential handling using environment variables and GitHub Secrets so that non-engineer contributors are never directly exposed to raw API keys
 
 ### SME Use Case Development
 
@@ -122,7 +125,7 @@ These limitations are acknowledged and are the focus of the roadmap.
 
 ### Describe your role: are you a primary or core maintainer?
 
-> I am the primary maintainer and creator of this project. I designed and built the initial research workflow, Python implementation, and documentation. I am responsible for all aspects of the project at this stage, and I am building toward a community of contributors from SME and traditional industry backgrounds.
+> I am the primary maintainer and creator of this project. I am a non-engineer working in a small business in the paint and coatings industry. I built this tool because I needed it myself — as someone without an engineering background, I had no structured way to collect public market information, audit sources, and identify AI adoption opportunities. I designed the initial research workflow, Python implementation, and documentation. I am responsible for all aspects of the project at this stage, and I am building toward a community of contributors who, like me, work in traditional industries without dedicated engineering teams.
 
 ### Why is this repository eligible?
 
@@ -134,11 +137,11 @@ These limitations are acknowledged and are the focus of the roadmap.
 
 ### Anything else you want OpenAI to know?
 
-> This project focuses on a specific underserved segment: non-engineer business users at SMEs in traditional industries such as paint, coatings, anticorrosion, and infrastructure maintenance. AI adoption in these industries is slower than in software-first sectors, partly because accessible tools are lacking. This project aims to make structured, source-audited AI research workflows available to people who are not engineers but still need to understand markets, competitors, and AI adoption opportunities.
+> This project is built by a non-engineer working in an SME, for non-engineer workers in SMEs. It focuses on traditional B2B industries such as paint, coatings, anticorrosion, manufacturing, and infrastructure maintenance, where AI and DX adoption may be difficult due to limited engineering resources, limited budgets, and lack of dedicated data science teams. The goal is not to replace experts or consultants, but to provide a practical, human-in-the-loop research workflow that helps SME workers collect public information, audit sources, check numerical claims, and identify realistic AI adoption opportunities.
 >
-> The project is honest about its early-stage status. I am not claiming it is widely used or production-ready. I am claiming that it addresses a real problem — AI adoption support for non-engineer SME staff — and that OpenAI's resources would meaningfully accelerate the roadmap.
+> The project is honest about its early-stage status. I am not claiming it is widely used or production-ready. I am claiming that it addresses a real problem — AI adoption support for non-engineer SME staff — and that OpenAI's resources would meaningfully accelerate the roadmap toward safer, more accessible AI research workflows for people like me.
 >
-> I am committed to maintaining this project as open source, improving documentation for non-technical users, and building the tool toward genuine usefulness for traditional industry SMEs.
+> I am committed to maintaining this project as open source, improving documentation for non-technical users, and ensuring that any future API integrations are designed with safe credential handling so that non-engineer contributors are never directly exposed to raw API keys.
 
 ---
 

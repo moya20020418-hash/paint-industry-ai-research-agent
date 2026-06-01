@@ -52,6 +52,14 @@ This tool is designed to help non-engineer staff:
 
 ---
 
+## Who Built This and Why?
+
+The developer of this project is a non-engineer working in a small business in Japan's paint and coatings industry. This tool was built out of direct personal experience: as a non-engineer, there was no practical way to collect public market information, audit sources systematically, and identify AI adoption opportunities — without either writing code from scratch or paying for tools designed for large engineering teams.
+
+This project is not built by engineers for non-engineers. It is built by a non-engineer for non-engineers — which shapes every design decision: no API keys required to start, configuration in plain text files, output in readable Markdown, and human review as a first-class requirement rather than an afterthought.
+
+---
+
 ## Why Open Source?
 
 Open-source distribution allows:
