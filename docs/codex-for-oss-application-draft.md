@@ -54,7 +54,7 @@ This is an early-stage project. I am the sole maintainer at this point, building
 
 ---
 
-## 4. How Codex / ChatGPT Pro / API Credits Would Be Used
+## 4. How Codex / API Credits Would Be Used
 
 If accepted for the Codex for Open Source program, I would use the credits for:
 

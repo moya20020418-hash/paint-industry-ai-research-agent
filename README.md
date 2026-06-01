@@ -306,18 +306,26 @@ Non-engineer contributions are especially welcome: documentation improvements, u
 
 If Japanese characters appear garbled in the command prompt, this is a display issue only. The generated Markdown files are saved correctly. Open them in VS Code or Notepad to view them properly.
 
+On some Windows systems, the `python` command may not work (it opens the Microsoft Store instead). Use the `py` launcher instead:
+
+```powershell
+py src/main.py --list-topics
+py src/main.py --collect-web
+py -m pip install requests beautifulsoup4 lxml
+```
+
 ---
 
 ## Frequently Asked Questions
 
-**Q: `python` command not found**
-A: Python is not installed or not in PATH. Download from [python.org](https://www.python.org/).
+**Q: `python` command not found or opens the Microsoft Store**
+A: Use the `py` launcher instead: `py src/main.py`. If `py` is also not found, download Python from [python.org](https://www.python.org/) and make sure to check "Add Python to PATH" during installation.
 
 **Q: `ModuleNotFoundError`**
-A: This tool uses only Python standard libraries. Run `python src/main.py` from the project root directory.
+A: Run `py src/main.py` (not `python`) from the project root directory. If the error is about `requests` or `bs4`, run `py -m pip install requests beautifulsoup4 lxml` first.
 
 **Q: The report is mostly blank**
-A: This is expected. The tool generates a structured template. Fill in Sections 4-6 with your own research findings.
+A: This is expected. The tool generates a structured template. Fill in Sections 4-6 (confirmed facts, assumptions, insights) and Sections 11-16 (AI adoption opportunities) with your own research findings.
 
 **Q: Can I use this without programming knowledge?**
 A: Yes, with guidance. You need to run a few commands in the terminal. See the Quick Start section. More user-friendly options are planned for future releases.

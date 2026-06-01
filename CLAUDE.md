@@ -17,7 +17,7 @@
 - **Human-in-the-loop（人間のレビューが前提）** — AIが自動判断するのではなく、人間のレビューを中心に据える
 - **Public-source research workflow（公開情報のみ使用）** — 機密情報・内部情報は一切使用しない
 - **AI adoption opportunity discovery（AI導入機会の発見）** — 塗料業界・製造業SMEでのAI活用機会を整理する
-- **Traditional industry AI adoption（伝統的産業のAI導入支援）** — AI普及が遅い産業への橋渡し
+- **Traditional industry AI adoption（伝統的産業のAI導入支援）** — AI普及が難しい可能性がある産業への橋渡し
 
 **最重要目的：ハルシネーション防止**
 
