@@ -144,11 +144,31 @@ This collects text from the URLs in `config/sources.json` and saves them to `inp
 
 ### Step 5: Generate a research report
 
-```bash
-python src/main.py --input web_collected_YYYYMMDD.md
+Run the report generator with an input file from the `inputs/` folder.
+
+On Windows:
+
+```powershell
+py src/main.py --input sample_input.md
 ```
 
-The report is saved to `reports/research_report_YYYYMMDD_HHMMSS.md`.
+On macOS/Linux:
+
+```bash
+python src/main.py --input sample_input.md
+```
+
+The command above reads:
+
+```text
+inputs/sample_input.md
+```
+
+The report is saved to:
+
+```text
+reports/research_report_YYYYMMDD_HHMMSS.md
+```
 
 ### Step 6: Review the report
 
