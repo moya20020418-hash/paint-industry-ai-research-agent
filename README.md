@@ -178,7 +178,7 @@ Open the report in any text editor. **Fill in Sections 4-6 with your verified re
 
 A sample generated report is available at:
 
-`reports/research_report_webcollect_anticorrosion_20260530.md`
+`examples/sample_report_webcollect_anticorrosion_20260530.md`
 
 The report demonstrates how the tool separates:
 
